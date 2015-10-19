@@ -5,7 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://corgi:password@dbh11.mongolab.com:27117/okcorgi');
+mongoose.connect(process.env.MONGO_DB_CONN_OKCORGI);
+
 
 var routes = require('./routes/index');
 
